@@ -5,7 +5,7 @@
 Summary: X.Org X11 DMX runtime library
 Name: libdmx
 Version: 1.1.4
-Release: 3%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}
+Release: 4%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}
 License: MIT
 Group: System Environment/Libraries
 URL: http://www.x.org
@@ -67,6 +67,10 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 %{_includedir}/X11/extensions/dmxext.h
 
 %changelog
+* Thu Oct 09 2025 Olivier Fourdan <ofourdan@redh.com> - 1.1.4-4
+- Rebuild for CRB
+  Resolves: RHEL-117869
+
 * Thu Jul 05 2018 Adam Jackson <ajax@redhat.com> - 1.1.4-3
 - Drop useless %%defattr
 
