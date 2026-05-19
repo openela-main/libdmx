@@ -5,7 +5,7 @@
 Summary: X.Org X11 DMX runtime library
 Name: libdmx
 Version: 1.1.4
-Release: 12%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}
+Release: 14%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}
 License: MIT
 URL: http://www.x.org
 
@@ -65,6 +65,14 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 %{_includedir}/X11/extensions/dmxext.h
 
 %changelog
+* Thu Oct 09 2025 Tomas Pelka <tpelka@redhat.com> - 1.1.4-14
+- Rebuild for CRB again, tpelka messed up
+  Resolves: RHEL-120218
+
+* Thu Oct 09 2025 Olivier Fourdan <ofourdan@redhat.com> - 1.1.4-13
+- Rebuild for CRB
+  Resolves: RHEL-120218
+
 * Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 1.1.4-12
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
